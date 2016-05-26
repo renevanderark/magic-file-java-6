@@ -1,4 +1,4 @@
-*.so
+src/main/resources/*.so
 *.iml
 target
 .idea

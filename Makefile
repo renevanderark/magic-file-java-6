@@ -6,7 +6,7 @@ clean:
 
 compile:
 	mkdir -p src/main/resources
-	g++ -shared -o src/main/resources/libmagicjbind.so -I$(JAVA_HOME)/include/ -I$(JAVA_HOME)/include/linux/ -lmagic src/csource/nl_kb_magicfile_MagicFile.cc
+	g++ -fPIC -shared -o src/main/resources/libmagicjbind.so -I$(JAVA_HOME)/include/ -I$(JAVA_HOME)/include/linux/ src/csource/nl_kb_magicfile_MagicFile.cc -lmagic
 
 test: compile
 	mvn test;
